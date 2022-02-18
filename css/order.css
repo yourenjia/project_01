@@ -1,0 +1,267 @@
+body {
+	background-color: #f7f7f8;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?2ozopi');
+	src: url('../fonts/icomoon.eot?2ozopi#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?2ozopi') format('truetype'),
+		url('../fonts/icomoon.woff?2ozopi') format('woff'),
+		url('../fonts/icomoon.svg?2ozopi#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+.pannel {
+	border-radius: 5px;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+
+.red_style {
+	color: #cf4444;
+}
+
+.main {
+	/* 80px: 为了内容不被底部区域盖住，固定定位是脱标的 */
+	padding: 12px 11px 80px;
+}
+
+.user_msg {
+	display: flex;
+	align-items: center;
+	padding: 15px 0 15px 11px;
+}
+
+.user_msg .location {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	background-image: linear-gradient(90deg,
+			#6fc2aa 5%,
+			#54b196 100%);
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 16px;
+}
+
+.user_msg .location::after {
+	font-family: 'icomoon';
+	content: '\e947';
+
+}
+
+.user {
+	flex: 1;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+}
+
+.top h5 {
+	font-size: 15px;
+	font-weight: 400;
+	width: 55px;
+	color: #262626;
+}
+
+.top p {
+	font-size: 13px;
+	color: #333333;
+}
+
+.bottom {
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.more {
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+}
+
+.more::after {
+	content: '\ea50';
+	line-height: 44px;
+	text-align: center;
+	font-family: 'icomoon';
+	font-size: 28px;
+}
+
+/* 商品模块开始 */
+.goods {
+	display: flex;
+	 padding: 11px 0 11px 11px;
+}
+
+.goods .pic {
+	width: 85px;
+	height: 85px;
+	margin-right: 10px;
+}
+
+.goods .info{
+	flex: 1;
+}
+
+.goods .info h5{
+	font-size: 13px;
+	font-weight: 400;
+	color: #262626;
+}
+
+.goods .info p{
+	width: 95px;
+	height: 20px;
+	margin: 5px 0;
+	background-color: #f7f7f8;
+	font-size: 12px;
+	color: #888888;
+}
+
+.goods .info p .goods-color{
+	margin-right: 10px;
+}
+
+.goods .info .price .now-price i{
+	font-size: 16px;
+}
+
+.goods .info .price .old-price{
+	color: #999999;
+	text-decoration: line-through;
+	margin-left: 14px;
+}
+
+.goods .count {
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+}
+
+.goods .count span{
+	font-size: 15px;
+}
+
+.goods .count span::before{
+	content: '\e900';
+	font-family: 'icomoon';
+	vertical-align: middle;
+}
+/* 商品模块结束*/
+
+/* 其他模块开始 */
+.rest{
+	padding: 15px;
+}
+/* 让每一个子项flex布局，给出下边距 */
+.rest div{
+	display: flex;
+	margin-bottom: 30px;
+}
+/* 设置奇数子项主轴排列方式 */
+.rest div:nth-child(2n+1){
+	justify-content: space-between;
+}
+/* 给所有文字添加样式 */
+.rest div h5,
+.rest div p{
+	font-size: 13px;
+	color: #262626;
+	font-weight: 400;
+}
+/* 给第二个子项里的p添加独有的样式 */
+.rest div:nth-child(2) p{
+	margin-left: 20px;
+	font-size: 12px;
+	color: #989898;
+}
+/* 给支付宝后面添加一个箭头 */
+.rest div:last-child p::after{
+	content: '\ea50';
+	font-family: 'icomoon';
+	font-size: 12px;
+	text-align: center;
+}
+
+/* 给最后一个子项去除底外边距 */
+.rest div:last-child{
+	margin-bottom: 0;
+}
+/* 其他模块开始 */
+
+
+/* 价格详情模块开始 */
+.price-detils{
+	padding: 15px;
+}
+.price-detils div{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.price-detils div:last-child{
+	margin-bottom: 0;
+}
+
+.price-detils div h5,
+.price-detils div p{
+	font-size: 13px;
+	font-weight: 400;
+	color: #262626;
+}
+
+.price-detils div .discount{
+	color: #cf4444;
+}
+
+/* 价格详情模块结束 */
+
+/* 底部确认支付部分开始 */
+.pay {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	padding: 0 10px;
+	border: 1px solid #ededed;
+}
+
+.pay .left {
+	font-size: 12px;
+	color: #1e1e1e;
+}
+
+.pay .left span i {
+	font-size: 20px;
+}
+
+.pay .right a {
+	display: block;
+	width: 91px;
+	height: 35px;
+	background-image: linear-gradient(90deg,
+			#6fc2aa 5%,
+			#54b196 100%);
+	border-radius: 3px;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	font-size: 13px;
+}
+
+/* 底部确认支付部分结束 */
